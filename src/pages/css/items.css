@@ -1,0 +1,80 @@
+/* Global Reset */
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  /* padding-top: 10px; offset for fixed navbar */
+}
+
+/* Item details container */
+/* Item details container - enlarged */
+.item-details-container {
+  background-color: #fff;
+  padding: 60px; /* increased from 40px */
+  border-radius: 16px;
+  max-width: 1000px; /* increased from 700px */
+  width: 90%;
+  margin: 40px auto; /* adds space from top */
+  box-shadow: 8px 8px 32px rgba(66, 68, 90, 0.25);
+}
+
+
+/* Heading */
+.item-details-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #333;
+}
+
+.item-details-container h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 30px; /* was 28px */
+  color: #333;
+}
+
+.item-details-container p {
+  font-size: 22px; /* was 16px */
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.item-details-container button {
+  font-size: 20px; /* was 18px */
+  padding: 14px 24px;
+}
+
+
+/* Add to Cart button */
+.item-details-container button {
+  background-color: purple;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.item-details-container button:hover {
+  background-color: #5e0094;
+}
+
+/* Added to cart confirmation */
+.added-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 12px;
+}
