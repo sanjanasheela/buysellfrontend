@@ -1,0 +1,109 @@
+/* Global Reset */
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered signup container */
+.container {
+  background-color: #fff;
+  padding: 40px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 8px 8px 24px rgba(66, 68, 90, 0.2);
+}
+
+/* Heading */
+.container > h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Inputs */
+input {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-bottom-color: #007bff;
+}
+
+input::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Button */
+button {
+  background-color: purple;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 12px;
+}
+
+button:hover {
+  background-color: #5e0094;
+}
+
+/* Link line */
+span {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+
+span a {
+  color: purple;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+span a:hover {
+  text-decoration: underline;
+}

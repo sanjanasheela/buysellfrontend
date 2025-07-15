@@ -1,0 +1,87 @@
+/* Global Reset */
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Disable scroll */
+}
+
+/* Centered container */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Move content toward the top */
+  background-color: #f4f4f4;
+  padding-top: 40px;
+  padding-bottom: 200px; /* Add space from the top */
+}
+
+/* Form container */
+.container {
+  background-color: #fff;
+  padding: 32px 48px;
+  border-radius: 10px;
+  /* align-items: center; */
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 8px 8px 24px rgba(66, 68, 90, 0.2);
+}
+
+/* Heading */
+.container > h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form layout */
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.container input {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+
+.container input::placeholder {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Button styling */
+button {
+  background-color: purple;
+  border: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5e0094;
+}
