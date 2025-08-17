@@ -27,7 +27,7 @@ function Signup() {
     }
 
     try {
-      const url = `${process.env.REACT_APP_API_URL || "https://buysell-73zq.onrender.com"}/auth/signup`;
+      const url = `${process.env.REACT_APP_API_URL || "http://localhost:8000"}/auth/signup`;
 
       const response = await fetch(url, {
         method: "POST",
@@ -218,7 +218,7 @@ function Signup() {
             Already have an account?<Link to="/login">Login</Link>
           </span>
         </form>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </div>
     </>
   );

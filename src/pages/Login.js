@@ -14,7 +14,7 @@ function Login() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      fetch(`${process.env.REACT_APP_API_URL || 'https://buysell-73zq.onrender.com'}/auth/verify`, {
+      fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}/auth/verify`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -51,7 +51,7 @@ function Login() {
     }
 
     try {
-      const url = `${process.env.REACT_APP_API_URL || 'https://buysell-73zq.onrender.com'}/auth/login`;
+      const url = `${process.env.REACT_APP_API_URL || 'http://localhost:8000'}/auth/login`;
 
       const response = await fetch(url, {
         method: "POST",
@@ -70,7 +70,7 @@ function Login() {
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
 
-        const userInfoUrl = `https://buysell-73zq.onrender.com/auth/user/${email}`;
+        const userInfoUrl = `http://localhost:8000/auth/user/${email}`;
         const userResponse = await fetch(userInfoUrl, {
           method: "GET",
           headers: {
@@ -216,7 +216,6 @@ function Login() {
             <Link to="/signup">Signup</Link>
           </span>
         </form>
-        <ToastContainer />
       </div>
     </>
   );

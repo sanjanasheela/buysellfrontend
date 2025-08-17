@@ -11,7 +11,7 @@ function DeliverItems() {
 
     const fetchDeliverOrders = async () => {
       try {
-        const baseUrl = process.env.REACT_APP_API_URL || 'https://buysell-73zq.onrender.com';
+        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
         const response = await fetch(`${baseUrl}/deliver/${sellerId}`);
         const data = await response.json();
         console.log(data);
@@ -39,7 +39,7 @@ function DeliverItems() {
   
     try {
       // Step 1: Complete the transaction
-      const response = await fetch('https://buysell-73zq.onrender.com/deliver/complete', {
+      const response = await fetch('http://localhost:8000/deliver/complete', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -63,7 +63,7 @@ function DeliverItems() {
       // ✅ Step 2: Update item quantities for each delivered item
     for (const item of items) {
       console.log('item',item);
-      await fetch(`https://buysell-73zq.onrender.com/sell/edit`, {
+      await fetch(`http://localhost:8000/sell/edit`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

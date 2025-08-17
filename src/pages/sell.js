@@ -43,7 +43,7 @@ function Sell() {
     const categoryArray = category.split(',').map(cat => cat.trim()).filter(cat => cat !== '');
 
     try {
-      const url = `${process.env.REACT_APP_API_URL || "https://buysell-73zq.onrender.com"}/sell`;
+      const url = `${process.env.REACT_APP_API_URL || "http://localhost:8000"}/sell`;
       console.log('endingto url',url);
       const response = await fetch(url, {
         method: "POST",

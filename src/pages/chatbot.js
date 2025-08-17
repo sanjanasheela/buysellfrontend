@@ -19,7 +19,7 @@ const Chatbot = () => {
     setUserInput("");
 
     try {
-      const res = await fetch("https://buysell-73zq.onrender.com/chatbot/message", {
+      const res = await fetch("http://localhost:8000/chatbot/message", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
